@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+h1 {
+  background-color: rgba(0, 0, 255, 0.233);
+  width: 400px;
+  margin: 50px auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+article {
+  border: 1px solid grey;
+  width: 290px;
+  padding: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+  overflow-x: auto;
+
+}
+
+article:hover {
+  border-left: 8px solid blue;
+}
+
+article button {
+  background: none;
+  border: none;
+  color: blue;
+  font-size: 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: rgba(7, 7, 255, 0.685);
+}
+
+article .title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+div .a {
+  font-size: 16px;
+  text-decoration: none;
+  background: #0000ff4d;
+  padding: 6px 13px;
+  border-radius: 7px;
+  padding-bottom: 9px;
+  transition: 0.1s;
+  margin: 40px auto;
+  color: black;
+  display: block;
+  width: fit-content;
+}
+
+div .a:hover {
+  transform: translateY(2px);
+
+}
+
+section>p {
+  margin: 0px auto;
+  border-bottom: 5px solid #0000ff33;
+  border-radius: 10px;
+  padding: 7px 15px;
+  font-size: 20px;
+  width: fit-content;
+}
+
+
+section>button {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 17px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+section>button:active {
+  scale: 0.9;
+}

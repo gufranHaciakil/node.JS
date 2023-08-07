@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Trending Articles &#128293;</h1>
+  <section>
+    <% myData.forEach(item=> { %>
+
+      <article>
+        <div class="title">
+          <%= item.title %>
+        </div>
+        </div>
+        <div style="flex-grow: 1;" class="details">
+          <%= item.summary %>
+        </div>
+        <div style="text-align: right; margin-top: 0px;">
+          <a href="/dataDetails/<%= item._id  %>">
+            show more
+          </a>
+        </div>
+      </article>
+
+      <% }); %>
+  </section>
+  <div>
+    <a class="a" href="/addnewArticel">add new article</a>
+  </div>
+</body>
+
+</html>

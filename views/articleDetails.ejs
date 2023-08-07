@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>Article Details</title>
+</head>
+
+<body>
+  <section style="flex-direction: column">
+    <h1>
+      <%= opjMyData.title %>
+    </h1>
+    <p>
+      <%= opjMyData.body %>
+    </p>
+
+    <button data-linkid="<%= opjMyData._id %>" id="idd" class="btnId">
+      Delete this article
+    </button>
+  </section>
+
+  <script>
+    const articleId = document
+      .getElementById("idd")
+      .getAttribute("data-linkid");
+    console.log(articleId);
+    const btnId = document.getElementsByClassName("btnId")[0];
+    console.log(btnId);
+
+    btnId.addEventListener("click", (eo) => {
+      fetch(`/dataDetails/${articleId}`, { method: "DELETE" })
+        .then((response) => response.json())
+        .then((data) => (window.location.href = data.myLink))
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+  </script>
+</body>
+
+</html>

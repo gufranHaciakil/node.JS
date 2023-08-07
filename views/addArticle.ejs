@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="addArticle.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <section>
+    <h1>Create new article</h1>
+    <form method="POST" action="/html">
+      <label for="title">Article title :</label>
+      <input name="title" type="text" id="title" required>
+
+      <label for="summary">Article summary :</label>
+      <input name="summary" type="text" id="summary" required>
+
+      <label for="body">Article body : </label>
+      <textarea name="body" id="body" cols="30" rows="10" required></textarea>
+
+      <div>
+        <button>Create</button>
+      </div>
+    </form>
+    <a href="/html" class="buttonSpan">
+      <button style="position: relative;">
+        <span>&#x2B05;</span>
+        Back
+      </button>
+    </a>
+
+  </section>
+
+
+</body>
+
+</html>
